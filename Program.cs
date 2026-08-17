@@ -61,8 +61,6 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
@@ -73,17 +71,6 @@ builder.Services.AddCors(options =>
               .AllowCredentials();
     });
 });
-
-// builder.Services.AddCors(options =>
-// {
-//     options.AddPolicy("AllowFrontend", policy =>
-//     {
-//         policy.WithOrigins("http://192.168.0.9:3005")
-//               .AllowAnyHeader()
-//               .AllowAnyMethod()
-//               .AllowCredentials(); 
-//     });
-// });
 
 builder.Services.AddSignalR();
 builder.Services.AddControllers();
